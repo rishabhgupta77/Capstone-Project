@@ -1,4 +1,4 @@
-🎵 Spotify Clone (Flask + JS + HTML + CSS + Python)
+<h1>🎵 Spotify Clone</h1>
 
 A full-stack Spotify-inspired music streaming web application built using Flask (Python backend) and Vanilla JavaScript (frontend). This project mimics core features of Spotify like music playback, playlists, and a modern UI.
 
@@ -28,17 +28,4 @@ Local Storage (for saving user preferences)
 REST API (Flask routes)
 📁 Project Structure
 spotify-clone/
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── songs/
-│
-├── templates/
-│   └── index.html
-│
-├── app.py
-├── requirements.txt
-└── README.md
+```
