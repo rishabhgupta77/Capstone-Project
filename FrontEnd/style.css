@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 15px 30px;
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Grid */
+.songs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* Card */
+.song-card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+.song-card h3 {
+    margin: 0;
+    color: #38bdf8;
+}
+
+.song-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* Add this to style.css */
+.song-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+}
