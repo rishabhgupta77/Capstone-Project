@@ -2,6 +2,10 @@
 
 A full-stack Spotify-inspired music web application built using Flask (Python backend) and HTML, CSS, JavaScript (frontend). This project follows academic guidelines including GET & POST APIs, frontend-backend integration, and in-memory data storage.
 
+## Contributors 
+Rishabh Gupta - 2502140059<br>
+Naman Aggarwal - 2502140047
+
 ## 📌 Project Overview
 
 This project demonstrates:
