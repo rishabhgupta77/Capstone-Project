@@ -72,67 +72,6 @@ backend/
 | GET    | /products | Get all songs/products |
 | POST   | /products | Add new product      |
 
-## 📋 Project Requirements & Steps
-
-Students are expected to complete the following steps to get maximum score in the project:
-
-1. **Create a GitHub repository for the frontend** – HTML, CSS, JavaScript code.
-   - Reference: FS 17 - 1 (Frontend Development - Level 1) - Rishihood
-
-2. **Create a separate GitHub repository for the backend (Flask) code**.
-   - Reference: FS 19 - 1 (Backend Development - GET Products) - Rishihood
-
-3. **In the backend application, achieve the following:**
-   - a. Basic Setup of Flask App and working GET API. The GET API should return the products information.
-     - Reference: FS 19 - 1 (Backend Development - GET Products) - Rishihood
-   - b. Create an API to create a new product in the database using POST API. Data sent in body as JSON.
-     - Reference: FS 21 - (POST API) - Rishihood
-   - c. Store data in an in-memory database like list or dictionary.
-     - Reference: FS 21 - (POST API) - Rishihood
-   - d. Perform validation on data to check if valid.
-     - Reference: FS 21 - (POST API) - Rishihood
-
-4. **In the frontend application, achieve the following:**
-   - a. Create a home page with a navbar. Links to Home and Add Product pages.
-   - b. In Home page JS, call backend API (localhost) and show products list using DOM manipulation.
-     - Reference: FS 22 - (POST API integration with Frontend) - Rishihood
-   - c. On Add Product page, form to get product info. On submit, call POST API to add product.
-
-5. **Note:** Update/delete/search operations, SQL database, and live link are optional. Percentage from waived topics reallocated to frontend UI/UX, logic, and functionalities.
-
-## 📊 Evaluation Criteria (Revised)
-
-- **Frontend UI Development (UI/UX) – 15%**
-  - Code structure
-  - HTML semantics
-  - CSS styling
-  - Responsive Mobile Design
-
-- **Frontend Feature Development (JS Logic) – 15%**
-  - Code structure and logic
-
-- **Backend APIs – 15%**
-  - Code structure and logic
-  - List/dict to store data
-  - Working APIs
-  - Basic features (APIs with data validation and CRUD operations)
-
-- **Full Stack App with API Integration – 25%**
-  - Frontend-backend integrated and working
-  - API Integration
-  - Basic features (integrated with frontend, data validation, CRUD operations)
-
-- **VIVA – 30%**
-
-### Optional (Scoring Advantage):
-- Update, Delete, Search, Filter APIs
-- SQL Database integration
-- Lighthouse score
-- API latency analysis
-- (Deployment) Live link of backend & frontend
-
-**NOTE:** If working on something else, continue and connect with faculty for guidance.
-
 ## 🔄 Application Flowchart
 
 ```mermaid
