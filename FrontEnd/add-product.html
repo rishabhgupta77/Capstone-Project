@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Song</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🎧 Add New Song</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="add-product.html">Add Song</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="songForm" class="song-form">
+            <div class="form-group">
+                <label for="name">Song Name</label>
+                <input id="name" name="name" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="artist">Artist</label>
+                <input id="artist" name="artist" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price (₹)</label>
+                <input id="price" name="price" type="number" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="thumbnail">Thumbnail Filename</label>
+                <input id="thumbnail" name="thumbnail" type="text" placeholder="download.jpeg">
+                <small>Use an image file that exists in the FrontEnd folder.</small>
+            </div>
+
+            <button type="submit">Add Song</button>
+            <p id="message" class="form-message"></p>
+        </form>
+    </main>
+
+    <script>
+        const BASE_URL = "http://127.0.0.1:5001/products";
+        const form = document.getElementById("songForm");
+        const message = document.getElementById("message");
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+            message.textContent = "";
+
+            const payload = {
+                name: document.getElementById("name").value.trim(),
+                artist: document.getElementById("artist").value.trim(),
+                price: Number(document.getElementById("price").value),
+                thumbnail: document.getElementById("thumbnail").value.trim() || "download.jpeg"
+            };
+
+            try {
+                const res = await fetch(BASE_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await res.json();
+
+                if (!res.ok) {
+                    throw new Error(result.error || "Unable to add song");
+                }
+
+                message.textContent = "Song added successfully!";
+                message.className = "form-message success";
+                form.reset();
+            } catch (err) {
+                message.textContent = err.message;
+                message.className = "form-message error";
+            }
+        });
+    </script>
+</body>
+
+</html>
